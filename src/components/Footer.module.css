@@ -1,0 +1,150 @@
+.footer {
+  position: relative;
+  background: var(--deep-lilac);
+  color: #ede3f8;
+  border-radius: 40px 40px 0 0;
+}
+
+.inner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 20px;
+}
+
+.brandCol {
+  grid-column: 1 / -1;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.symbol {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--cream);
+}
+
+.tagline {
+  margin-top: 2px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--freesia-yellow);
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.socialLink {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--soft-lilac);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.socialLink:hover {
+  background: rgba(250, 246, 233, 0.12);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.col a {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.col a:hover {
+  color: var(--freesia-yellow);
+}
+
+.colTitle {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lilac-border);
+}
+
+.visit {
+  grid-column: 1 / -1;
+  color: var(--cream);
+}
+
+.hours {
+  color: #ede3f8;
+}
+
+.legal {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(205, 184, 234, 0.35);
+  font-size: 12px;
+  color: var(--lilac-border);
+}
+
+@media (min-width: 900px) {
+  .footer {
+    border-radius: 48px 48px 0 0;
+  }
+
+  .inner {
+    padding-top: 64px;
+    padding-bottom: 48px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 0.7fr) minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .brandCol,
+  .visit {
+    grid-column: auto;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .tagline {
+    margin-top: 4px;
+  }
+
+  .col {
+    font-size: 15px;
+  }
+
+  .legal {
+    margin-top: 48px;
+    padding-top: 24px;
+    font-size: 13px;
+  }
+}
